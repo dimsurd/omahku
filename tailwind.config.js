@@ -14,7 +14,11 @@ module.exports = {
       black3: "#373737",
       orange: "#fa5a09",
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        body: ["Montserrat"],
+      },
+    },
   },
   plugins: [],
 };
