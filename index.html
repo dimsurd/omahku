@@ -7,13 +7,57 @@
     <link rel="stylesheet" href="./dist/output.css" />
     <title>Omahku</title>
     <link rel="shortcut icon" href="./assets/img/omahku-logo.png" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
   </head>
+  <!-- Demo styles -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-height: 255px;
+      object-fit: none;
+    }
+    .swiper-wrapper {
+      padding-left: 100px;
+      height: 450px;
+    }
+  </style>
   <body class="font-body">
     <!-- Navbar -->
     <section id="navbar" class="mb-10 mt-5 md:mb-20">
       <div class="flex place-content-center w-full md:px-[96px] md:pt-5 px-5">
         <div class="flex flex-row justify-between w-full items-center">
-          <a href="" class="flex items-center">
+          <a href="#" class="flex items-center">
             <img src="./assets/img/omahku-logo.png" alt="logo-omahku" />
             <span class="text-ungu font-bold ml-2 text-2xl">Omahku</span>
           </a>
@@ -22,28 +66,28 @@
               <li>
                 <a
                   class="font-semibold text-xl text-black hover:text-black"
-                  href=""
+                  href="#"
                   >HOME</a
                 >
               </li>
               <li>
                 <a
                   class="font-semibold text-xl text-abu hover:text-black"
-                  href=""
+                  href="#"
                   >ABOUT</a
                 >
               </li>
               <li>
                 <a
                   class="font-semibold text-xl text-abu hover:text-black"
-                  href=""
+                  href="#"
                   >BLOG</a
                 >
               </li>
               <li>
                 <a
                   class="font-semibold text-xl text-abu hover:text-black"
-                  href=""
+                  href="#"
                   >PROPERTY</a
                 >
               </li>
@@ -278,44 +322,367 @@
       <div class="title-carousel-featured-property-section">
         <div class="flex flex-row justify-between">
           <p class="text-6xl font-bold">Featured Property</p>
-          <p>ini btn</p>
         </div>
       </div>
     </div>
-    <div class="carousel-featured-property-section mt-9 md:mt-14 md:pl-[96px]">
-      <div class="container-fluid">
-        <div class="w-full flex wrap overflow-auto">
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            unde vel itaque tempore reprehenderit accusamus.
-          </h1>
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            unde vel itaque tempore reprehenderit accusamus.
-          </h1>
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            unde vel itaque tempore reprehenderit accusamus.
-          </h1>
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            unde vel itaque tempore reprehenderit accusamus.
-          </h1>
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            unde vel itaque tempore reprehenderit accusamus.
-          </h1>
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            unde vel itaque tempore reprehenderit accusamus.
-          </h1>
-          <h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-            unde vel itaque tempore reprehenderit accusamus.
-          </h1>
+    <!-- Swiper -->
+    <div class="swiper mySwiper mt-14">
+      <div class="swiper-wrapper">
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property1.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Nomaden Omah Sekut</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- End Cards Items -->
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property2.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Jancuk Omah</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards Items -->
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property3.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Jancuk Omah</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards Items -->
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property1.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Nomaden Omah Sekut</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards Items -->
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property2.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Jancuk Omah</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards Items -->
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property3.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Jancuk Omah</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards Items -->
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property1.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Nomaden Omah Sekut</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards Items -->
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property2.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Jancuk Omah</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards Items -->
+        <!-- Cards Items -->
+        <div class="swiper-slide">
+          <div class="cards-property border-2 border-abuBorder">
+            <div class="flex flex-col p-2">
+              <img src="./assets/img/property3.png" alt="" class="p-0 m-0" />
+              <div class="flex flex-row justify-between">
+                <div class="text-left">
+                  <p class="text-abuMuda text-xl text-left">
+                    <span class="font-bold text-3xl text-ungu">$128</span> /
+                    Month
+                  </p>
+                  <p class="text-3x; font-bold mt-3">Jancuk Omah</p>
+                  <p class="text-lg">San Diego, California. USA</p>
+                </div>
+                <div class="pr-3">
+                  <button
+                    class="rounded-full border-[1px] border-abuBorder w-12 h-12"
+                    style="text-align: -webkit-center"
+                  >
+                    <svg
+                      class="hover:fill-beureum"
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M16.9024 3.8351C15.0842 3.8351 13.4569 4.7191 12.4423 6.07523C11.4277 4.7191 9.8003 3.8351 7.98208 3.8351C4.89812 3.8351 2.3968 6.34646 2.3968 9.45051C2.3968 10.6459 2.58767 11.7509 2.91917 12.7756C4.50635 17.7983 9.39849 20.8019 11.8194 21.6256C12.161 21.7461 12.7235 21.7461 13.0651 21.6256C15.486 20.8019 20.3782 17.7983 21.9653 12.7756C22.2969 11.7509 22.4877 10.6459 22.4877 9.45051C22.4877 6.34646 19.9864 3.8351 16.9024 3.8351Z"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Cards Items -->
       </div>
+      <!-- <div class="swiper-pagination"></div> -->
     </div>
+    <!-- End Swiper -->
     <div class="container-fluid px-5 md:px-[96px] md:mt-36 mt-24">
       <div class="w-full flex flex-col">
         <p
@@ -393,22 +760,22 @@
               <div class="grid gap-4 auto-rows-max mt-6">
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >About Us</a
                 >
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >Contact</a
                 >
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >Career</a
                 >
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >Blog</a
                 >
               </div>
@@ -418,17 +785,17 @@
               <div class="grid gap-4 auto-rows-max mt-6">
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >Website</a
                 >
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >Email</a
                 >
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >Whatsapp</a
                 >
               </div>
@@ -438,22 +805,22 @@
               <div class="grid gap-4 auto-rows-max mt-6">
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >FAQ</a
                 >
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >Booking</a
                 >
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >City Guide</a
                 >
                 <a
                   class="hover:text-black3 text-abu font-semibold text-lg"
-                  href=""
+                  href="#"
                   >Cancelation Option</a
                 >
               </div>
@@ -495,5 +862,23 @@
         </p>
       </div>
     </footer>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
