@@ -800,6 +800,14 @@ video {
   width: 1.5rem;
 }
 
+.w-96{
+  width: 24rem;
+}
+
+.w-\[800px\]{
+  width: 800px;
+}
+
 .min-w-full{
   min-width: 100%;
 }
@@ -1013,6 +1021,11 @@ video {
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .pr-3{
@@ -1326,8 +1339,16 @@ video {
     width: 25%;
   }
 
+  .md\:w-full{
+    width: 100%;
+  }
+
   .md\:max-w-\[165px\]{
     max-width: 165px;
+  }
+
+  .md\:max-w-\[1169px\]{
+    max-width: 1169px;
   }
 
   .md\:flex-row{

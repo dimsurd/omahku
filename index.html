@@ -50,6 +50,7 @@
     .swiper-wrapper {
       padding-left: 100px;
       height: 450px;
+      margin-top: 10px !important;
     }
     .cards-property {
       width: 100%;
@@ -375,13 +376,15 @@
       <div
         class="navigations swiper-button-prev border-[1px] border-ungu rounded-full w-12 h-auto"
       ></div>
-      <div class="swiper-wrapper mt-3">
+      <div
+        class="swiper-wrapper container-fluid px-5 md:px-[96px] w-full max-w-[2048px]"
+      >
         <!-- Cards Items -->
         <div class="swiper-slide">
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property1.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -420,7 +423,7 @@
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property2.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -459,7 +462,7 @@
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property3.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -498,7 +501,7 @@
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property1.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -537,7 +540,7 @@
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property2.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -576,7 +579,7 @@
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property3.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -615,7 +618,7 @@
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property1.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -654,7 +657,7 @@
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property2.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -693,7 +696,7 @@
           <div class="cards-property border-2 border-abuBorder">
             <div class="flex flex-col p-2">
               <img src="./assets/img/property3.png" alt="" class="p-0 m-0" />
-              <div class="flex flex-row justify-between">
+              <div class="flex flex-row justify-between mt-3">
                 <div class="text-left">
                   <p class="text-abuMuda text-xl text-left">
                     <span class="font-bold text-3xl text-ungu">$128</span> /
@@ -727,6 +730,7 @@
           </div>
         </div>
         <!-- End Cards Items -->
+        <div class="swiper-slide"></div>
       </div>
 
       <!-- <div class="swiper-pagination"></div> -->
@@ -757,9 +761,7 @@
         <div
           class="cards bg-black2 md:h-[403px] md:max-w-screen-[1169px] rounded-xl pt-11 md:pt-11px flex justify-center"
         >
-          <div
-            class="flex flex-col text-center w-full md:w-1/2 mb-[44px] md:mb-11px"
-          >
+          <div class="flex flex-col text-center w-full md:w-full self-center">
             <p
               class="text-xl md:text-6xl text-white font-semibold leading-[110%]"
             >
@@ -943,7 +945,6 @@
           640: {
             slidesPerView: 3,
             spaceBetween: 30,
-            freeMode: true,
           },
         },
       });
