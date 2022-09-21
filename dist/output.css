@@ -836,12 +836,40 @@ video {
   width: 0.75rem;
 }
 
+.w-1\/2{
+  width: 50%;
+}
+
+.w-3\/4{
+  width: 75%;
+}
+
 .min-w-full{
   min-width: 100%;
 }
 
 .max-w-\[2048px\]{
   max-width: 2048px;
+}
+
+.max-w-\[90px\]{
+  max-width: 90px;
+}
+
+.max-w-\[135px\]{
+  max-width: 135px;
+}
+
+.max-w-\[120px\]{
+  max-width: 120px;
+}
+
+.max-w-\[140px\]{
+  max-width: 140px;
+}
+
+.max-w-\[190px\]{
+  max-width: 190px;
 }
 
 .flex-grow{
@@ -1474,6 +1502,10 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.25rem * var(--tw-space-x-reverse));
     margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:self-start{
+    align-self: flex-start;
   }
 
   .md\:border-0{
