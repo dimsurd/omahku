@@ -732,6 +732,10 @@ video {
   margin-right: 1.5rem;
 }
 
+.mb-11{
+  margin-bottom: 2.75rem;
+}
+
 .block{
   display: block;
 }
@@ -1141,6 +1145,11 @@ video {
   padding-right: 0.75rem;
 }
 
+.py-11{
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
 .pr-3{
   padding-right: 0.75rem;
 }
@@ -1171,6 +1180,10 @@ video {
 
 .pl-5{
   padding-left: 1.25rem;
+}
+
+.pb-11{
+  padding-bottom: 2.75rem;
 }
 
 .text-left{
