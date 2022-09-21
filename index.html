@@ -84,6 +84,13 @@
     .swiper-button-next {
       background-image: url("./assets/img/btn-next.png") !important;
     } */
+
+    @media only screen and (max-width: 768px) {
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+    }
   </style>
   <body class="font-body">
     <!-- Navbar -->
@@ -289,7 +296,7 @@
               </div>
             </div>
           </div>
-          <div class="w-auto md:w-1/2 mt-12 md:mt-0">
+          <div class="w-auto md:w-1/2 mt-12 md:mt-0 pl-5 md:pl-0">
             <h1 class="font-bold text-black text-6xl">Get to Know Us More</h1>
             <p class="text-abu text-lg mt-4 leading-[240%]">
               <span class="block"
@@ -363,7 +370,7 @@
         </div>
       </div>
       <div
-        class="navigations swiper-button-next border-[1px] border-ungu rounded-full w-12 h-auto"
+        class="navigations swiper-button-next border-[1px] border-ungu rounded-full w-12 h-auto hidden"
       ></div>
       <div
         class="navigations swiper-button-prev border-[1px] border-ungu rounded-full w-12 h-auto"
@@ -926,16 +933,19 @@
           320: {
             slidesPerView: 1,
             spaceBetween: 20,
+            freeMode: false,
           },
           // when window width is >= 480px
           480: {
             slidesPerView: 2,
             spaceBetween: 30,
+            freeMode: false,
           },
           // when window width is >= 640px
           640: {
-            slidesPerView: 4,
-            spaceBetween: 40,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            freeMode: true,
           },
         },
       });
