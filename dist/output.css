@@ -872,6 +872,10 @@ video {
   max-width: 190px;
 }
 
+.max-w-\[13px\]{
+  max-width: 13px;
+}
+
 .flex-grow{
   flex-grow: 1;
 }
@@ -953,6 +957,10 @@ video {
 
 .place-self-center{
   place-self: center;
+}
+
+.self-start{
+  align-self: flex-start;
 }
 
 .self-center{
@@ -1502,6 +1510,12 @@ video {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.25rem * var(--tw-space-x-reverse));
     margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
   .md\:self-start{
